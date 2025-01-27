@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2 {
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #cccccc;
 }
@@ -108,8 +108,8 @@ h2 {
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: #f2f3f3;
   margin: 0 auto 1rem;
@@ -128,6 +128,15 @@ h2 {
   list-style: none;
   text-align: left;
   padding-left: 2rem;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #4f4952;
+}
+
+.sidebar-links a:hover {
+  color: #2a7ae2;
 }
 
 .sidebar-links li {
