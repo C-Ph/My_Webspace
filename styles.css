@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   font-family: monospace, sans-serif;
   margin: 0;
@@ -6,18 +7,36 @@
 }
 
 body {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #4f4952;
 }
 
+h1, h2 {
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #cccccc;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Header */
 .header {
   border-bottom: 1px solid #f2f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
+  background-color: #000000;
   width: 100%;
 }
 
@@ -27,6 +46,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .site-title {
@@ -41,11 +61,33 @@ body {
 }
 
 .menu a {
+  position: relative;
   color: #7a8288;
   text-decoration: none;
-  cursor: pointer;
+  padding-bottom: 5px;
 }
 
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c0c0c0;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after, .menu a.active::after {
+  width: 100%;
+  background-color: #494e52;
+}
+
+.menu a.active {
+  color: #494e52;
+}
+
+/* Sidebar */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -91,16 +133,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.main-content h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.main-content h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
-}
-
+/* Content */
 .main-content p {
   margin-bottom: 1rem;
 }
@@ -112,42 +145,156 @@ body {
 
 .content-section {
   display: block;
-  /* แก้จาก none เป็น block */
-  scroll-margin-top: 100px;
-  /* เพิ่มระยะห่างด้านบนเวลาเลื่อน */
   scroll-margin-top: 100px;
 }
 
-/* .active {
-    display: block;
-  } */
-.menu a {
+/* Cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  overflow: hidden;
   position: relative;
-  color: #7a8288;
-  text-decoration: none;
-  padding-bottom: 5px;
 }
 
-.menu a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #c0c0c0;
-  transition: width 0.3s ease;
-}
-
-.menu a:hover::after {
+.card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.menu a.active {
-  color: #494e52;
+.card-content {
+  padding: 15px;
 }
 
-.menu a.active::after {
+.card-content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.meta {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+/* Additional Sections */
+.portfolio-section, .cv-section {
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.portfolio-section {
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cv-section {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+
+
+.card {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.portfolio-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-item.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Global Styles */
+* {
+  font-family: monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4f4952;
+}
+
+h1, h2 {
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #cccccc;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid #f2f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
   width: 100%;
-  background-color: #494e52;
 }
