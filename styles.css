@@ -241,60 +241,25 @@ h2 {
   display: none;
 }
 
+/* เพิ่ม CSS สำหรับปุ่ม Show More/Less */
 .show-more-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background: none;
-  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 4px;
+  font-size: 0.875rem;
+  color: #333;
   cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .show-more-btn:hover {
-  background: #f5f5f5;
+  background-color: #333;
+  color: #ffffff;
+  border-color: #333;
 }
 
-/* Global Styles */
-* {
-  font-family: monospace, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Verdana, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4f4952;
-}
-
-h1, h2 {
-  margin: 2rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #cccccc;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-/* Header */
-.header {
-  border-bottom: 1px solid #f2f3f3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #ffffff;
-  width: 100%;
-}
