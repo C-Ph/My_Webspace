@@ -1,0 +1,153 @@
+* {
+  font-family: monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: #4f4952;
+}
+
+.header {
+  border-bottom: 1px solid #f2f3f3;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
+}
+
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  color: #494e52;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: #7a8288;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+}
+
+.sidebar {
+  text-align: center;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f2f3f3;
+  margin: 0 auto 1rem;
+}
+
+.sidebar-name {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-bio {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-links {
+  list-style: none;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.sidebar-links li {
+  margin-bottom: 0.5rem;
+}
+
+.main-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.main-content h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.main-content p {
+  margin-bottom: 1rem;
+}
+
+.main-content a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.content-section {
+  display: block;
+  /* แก้จาก none เป็น block */
+  scroll-margin-top: 100px;
+  /* เพิ่มระยะห่างด้านบนเวลาเลื่อน */
+  scroll-margin-top: 100px;
+}
+
+/* .active {
+    display: block;
+  } */
+.menu a {
+  position: relative;
+  color: #7a8288;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c0c0c0;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a.active {
+  color: #494e52;
+}
+
+.menu a.active::after {
+  width: 100%;
+  background-color: #494e52;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Pages</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <a href="#" class="site-title">Churalak Phonthongwichit</a>
+        <div class="menu">
+          <a href="#about">About Me</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#blog">Blog Posts</a>
+          <a href="#cv">CV</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <aside class="sidebar">
+        <div class="profile-img"></div>
+        <h2 class="sidebar-name">Churalak Phonthongwichit</h2>
+        <p class="sidebar-bio">Short biography for the left-hand sidebar</p>
+        <ul class="sidebar-links">
+          <li>
+            <a href="https://www.google.com/maps/place/Earth" target="_blank"
+              >🌍 Earth</a
+            >
+          </li>
+          <li>
+            <a href="https://www.redbrick.university" target="_blank"
+              >🏛️ Red Brick University</a
+            >
+          </li>
+          <li><a href="mailto:your-email@example.com">✉️ Email</a></li>
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=your-profile"
+              target="_blank"
+              >📚 Google Scholar</a
+            >
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0002-0000-0000" target="_blank"
+              >🆔 ORCID</a
+            >
+          </li>
+          <li>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank"
+              >📖 PubMed</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/your-github" target="_blank"
+              >💻 Github</a
+            >
+          </li>
+          <li>
+            <a href="https://bsky.app/your-username" target="_blank"
+              >🦋 Bluesky</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div id="about" class="content-section">
+          <h1>About Me</h1>
+          <p>
+            Welcome! My name is Churalak Phonthongwichit, and I am passionate
+            about research in [your field]. I specialize in [specific topics or
+            skills], and have experience working with [technologies, methods, or
+            notable projects].
+          </p>
+        </div>
+
+        <div id="portfolio" class="content-section">
+          <h1>Portfolio</h1>
+          <p>Check out my projects below:</p>
+          <ul>
+            <li><a href="[your_project_link_1]">Project 1</a></li>
+            <li><a href="[your_project_link_2]">Project 2</a></li>
+            <li><a href="[your_project_link_3]">Project 3</a></li>
+          </ul>
+        </div>
+
+        <div id="blog" class="content-section">
+          <h1>Blog Posts</h1>
+          <p>Here are my latest thoughts and insights:</p>
+          <ul>
+            <li>
+              <a href="[your_blog_post_link_1]"
+                >How I tackled [problem or topic]</a
+              >
+            </li>
+            <li>
+              <a href="[your_blog_post_link_2]">A deep dive into [subject]</a>
+            </li>
+            <li>
+              <a href="[your_blog_post_link_3]"
+                >The future of [field or industry]</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div id="cv" class="content-section">
+          <h1>CV</h1>
+          <p>
+            Download my CV <a href="[your_cv_link]" target="_blank">here</a>.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".header");
+        const sidebar = document.querySelector(".sidebar");
+
+        // ตั้งค่า sticky elements
+        header.style.position = "sticky";
+        header.style.top = "0";
+        header.style.zIndex = "1000";
+        header.style.backgroundColor = "#fff";
+
+        sidebar.style.position = "sticky";
+        sidebar.style.top = "80px";
+        sidebar.style.height = "calc(100vh - 80px)";
+        sidebar.style.zIndex = "999";
+
+        // เพิ่ม smooth scroll
+        document.querySelectorAll(".menu a").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
