@@ -270,14 +270,14 @@ h2 {
 .show-more-btn:hover {
   background-color: #333;
   color: #ffffff;
-  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  background: #333;
 }
 
 
 
 .footer {
-  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
-  padding: 15px 0;
+  background:  #ffffff;
+  padding: 20px 0;
   text-align: center;
 }
 
