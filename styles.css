@@ -127,7 +127,7 @@ h2 {
 .sidebar-links {
   list-style: none;
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .sidebar-links a {
@@ -329,4 +329,14 @@ h2 {
 
 .skills-icons img:hover {
   transform: scale(1.1);
+}
+
+
+.sidebar-links i {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-links a:hover i {
+  color: #2a7ae2;
 }

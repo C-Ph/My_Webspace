@@ -64,4 +64,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // เริ่มการทำงานสำหรับทั้ง Portfolio และ Online Learning
     initializeShowMore("portfolio");
     initializeShowMore("Online");
+    
   })
